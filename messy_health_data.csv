@@ -1,0 +1,106 @@
+Patient ID,Name,Gender,Age,Height_cm,Weight_kg,BMI,Blood Pressure,Diabetes,Smoker,Date of Visit,Diagnosis
+PID1030,marydoe,FEMALE,50,160,60,,,,,,none
+PID1065,jane,MALE,45,170cm,80,,,Y,No,,
+PID1064,ALICE JOHNSON,F,65,,60,,,,No,2023.04.01,Diabetes Type II
+PID1053,ALICE JOHNSON,male,45,,90,,,Y,,15-02-2023,
+PID1045,John ,MALE,25,160,70,,140/90,nO,,2023.04.01,Hypertension
+PID1094,ALICE,,,165,,,140/90,No,,2023/01/15,none
+PID1044,Micheal,FEMALE,25,170cm,,,,Y,Yes,2023.04.01,
+PID1047,jane Smith,FEMALE,50,170cm,60,,140/90,nO,No,2023.04.01,
+PID1010,Johndoe,,25,170,,,110 over 70,Yes,Yes,15-02-2023,Hypertension
+PID1000,jane ,FEMALE,,170cm,,,120/80,Yes,NO,,
+PID1018,ALICE ,F,,165,80,,140/90,,No,2023.04.01,Diabetes Type II
+PID1031,mary,F,forty,175,eighty,,120/80,YES,Yes,15-02-2023,Asthma
+PID1089,John,MALE,65,175,70,,110 over 70,nO,Occasionally,2023/01/15,
+PID1096,bOb JOHNSON,male,65,180,70,,130-85,YES,,15-02-2023,
+PID1077,ALICE Smith,,65,170,eighty,,130-85,nO,NO,15-02-2023,Asthma
+PID1004,Micheal,male,forty,170cm,70,,,,Occasionally,March 5 2023,Asthma
+PID1080,mary JOHNSON,,55,one seventy,70,,110 over 70,N,,,Hypertension
+PID1033,John ,,55,175,60,,,YES,,March 5 2023,Hypertension
+PID1012,bOb ,,45,165,60,,,Y,Occasionally,15-02-2023,Hypertension
+PID1026,ALICE ,FEMALE,35,175,,,140/90,Yes,,,Hypertension
+PID1099,ALICEdoe,male,50,170cm,85,,140/90,N,Occasionally,March 5 2023,none
+PID1055,bOb ,FEMALE,35,160,85,,110 over 70,Y,,,
+PID1022,jane,male,65,one seventy,60,,140/90,,NO,2023.04.01,Hypertension
+PID1076,Micheal ,FEMALE,50,,70,,,nO,Occasionally,2023/01/15,none
+PID1044,Micheal,FEMALE,25,170cm,,,,Y,Yes,2023.04.01,
+PID1072,bOb ,MALE,50,180,90,,140/90,nO,Occasionally,March 5 2023,
+PID1015,John ,male,55,160,eighty,,120/80,YES,No,,
+PID1042,jane JOHNSON,FEMALE,65,160,,,140/90,YES,,,
+PID1040,Micheal,male,65,160,70,,120/80,Y,No,,none
+PID1009,John ,M,25,one seventy,85,,120/80,YES,,2023/01/15,none
+PID1085,mary ,MALE,50,160,80,,140/90,N,NO,,Hypertension
+PID1011,ALICE,MALE,50,170cm,85,,,Yes,NO,March 5 2023,
+PID1045,John ,MALE,25,160,70,,140/90,nO,,2023.04.01,Hypertension
+PID1078,bObdoe,F,25,170,60,,120/80,nO,Yes,2023/01/15,Diabetes Type II
+PID1028,bOb,male,65,170,70,,,N,No,2023/01/15,
+PID1079,Micheal,male,45,180,eighty,,120/80,YES,NO,2023/01/15,Diabetes Type II
+PID1005,mary,M,55,160,60,,130-85,,,March 5 2023,none
+PID1062,ALICE,FEMALE,,165,60,,130-85,YES,NO,March 5 2023,Hypertension
+PID1056,bOb Smith,FEMALE,25,170,90,,110 over 70,YES,,15-02-2023,Asthma
+PID1039,John JOHNSON,FEMALE,55,,,,,No,NO,,Diabetes Type II
+PID1035,Michealdoe,male,25,170cm,60,,140/90,No,NO,,Diabetes Type II
+PID1016,Michealdoe,f,35,170cm,85,,120/80,YES,,,
+PID1066,Micheal JOHNSON,MALE,forty,175,80,,120/80,Yes,NO,15-02-2023,
+PID1034,ALICE Smith,F,forty,170cm,60,,120/80,YES,NO,,Hypertension
+PID1007,ALICE ,F,,165,80,,,No,Yes,15-02-2023,Diabetes Type II
+PID1043,John,f,55,,eighty,,110 over 70,No,NO,2023/01/15,none
+PID1068,marydoe,f,55,one seventy,90,,120/80,N,,2023.04.01,
+PID1069,bOb ,M,25,180,,,130-85,YES,,2023/01/15,none
+PID1027,bOb JOHNSON,f,55,160,80,,110 over 70,N,,,none
+PID1019,jane,,,165,eighty,,110 over 70,Y,Occasionally,2023/01/15,Hypertension
+PID1084,Micheal Smith,male,forty,170,,,,YES,No,15-02-2023,Asthma
+PID1025,Micheal JOHNSON,FEMALE,55,180,,,140/90,Yes,NO,2023/01/15,
+PID1073,janedoe,F,55,175,85,,140/90,nO,Occasionally,2023/01/15,Hypertension
+PID1049,John JOHNSON,F,50,165,eighty,,,Yes,No,2023/01/15,
+PID1013,janedoe,male,,,eighty,,,N,,March 5 2023,Asthma
+PID1024,John,f,25,180,60,,,N,NO,March 5 2023,
+PID1003,John ,f,25,170cm,85,,,YES,Yes,2023.04.01,Asthma
+PID1017,John,f,,one seventy,85,,140/90,,No,,Asthma
+PID1038,John ,FEMALE,50,one seventy,60,,110 over 70,nO,Occasionally,,
+PID1008,bOb,male,25,165,70,,,No,No,15-02-2023,Asthma
+PID1081,bOb ,M,forty,175,,,140/90,YES,No,2023/01/15,Diabetes Type II
+PID1006,Micheal ,male,65,170,60,,110 over 70,YES,No,,
+PID1067,ALICE,FEMALE,35,165,85,,120/80,Y,NO,15-02-2023,
+PID1036,Johndoe,FEMALE,35,,70,,,,Occasionally,2023.04.01,
+PID1091,janedoe,M,35,180,,,,Yes,No,,
+PID1083,janedoe,M,forty,170cm,85,,110 over 70,,,March 5 2023,Asthma
+PID1054,John Smith,f,55,one seventy,80,,120/80,nO,NO,2023/01/15,Asthma
+PID1050,bOb,MALE,55,one seventy,70,,,,NO,2023/01/15,
+PID1070,Johndoe,male,50,180,70,,130-85,YES,Yes,,Diabetes Type II
+PID1046,bObdoe,male,25,170cm,,,140/90,Yes,,15-02-2023,Asthma
+PID1083,janedoe,M,forty,170cm,85,,110 over 70,,,March 5 2023,Asthma
+PID1061,bObdoe,f,25,170cm,,,140/90,Yes,No,2023.04.01,
+PID1053,ALICE JOHNSON,male,45,,90,,,Y,,15-02-2023,
+PID1097,John Smith,male,65,one seventy,80,,120/80,No,Yes,2023.04.01,
+PID1041,mary ,M,forty,175,,,120/80,N,,2023.04.01,none
+PID1058,John,MALE,forty,one seventy,,,110 over 70,Y,Yes,2023/01/15,none
+PID1048,John Smith,MALE,forty,180,80,,130-85,nO,,,
+PID1090,marydoe,FEMALE,65,one seventy,60,,,Y,NO,March 5 2023,
+PID1057,bObdoe,M,35,,80,,,Y,Yes,March 5 2023,Hypertension
+PID1075,jane,FEMALE,55,one seventy,eighty,,110 over 70,YES,NO,,none
+PID1032,ALICEdoe,f,50,170,85,,140/90,Y,Yes,,
+PID1098,jane JOHNSON,F,55,,60,,120/80,nO,No,,Asthma
+PID1059,janedoe,male,35,170,eighty,,140/90,Yes,,2023/01/15,Hypertension
+PID1063,jane Smith,male,35,one seventy,60,,140/90,Y,Yes,2023/01/15,Hypertension
+PID1088,ALICE,F,50,165,,,110 over 70,nO,,,
+PID1037,ALICE ,,,170cm,eighty,,,nO,No,,Diabetes Type II
+PID1029,bOb JOHNSON,F,,one seventy,,,120/80,No,Occasionally,2023/01/15,
+PID1093,mary Smith,F,,175,70,,110 over 70,No,,2023/01/15,Hypertension
+PID1001,bOb Smith,f,45,170,85,,,N,,15-02-2023,Diabetes Type II
+PID1052,Micheal Smith,MALE,forty,180,eighty,,110 over 70,nO,No,2023.04.01,
+PID1021,Micheal JOHNSON,male,forty,170,,,140/90,Yes,,15-02-2023,none
+PID1002,janedoe,f,65,180,85,,,No,NO,15-02-2023,
+PID1023,ALICE Smith,F,50,170,eighty,,140/90,nO,NO,March 5 2023,
+PID1087,Micheal,male,25,170cm,,,,Yes,NO,,Asthma
+PID1095,ALICE ,male,65,180,85,,,,,,Asthma
+PID1074,John ,,65,180,70,,110 over 70,Y,,15-02-2023,
+PID1086,Michealdoe,,45,,85,,130-85,YES,No,2023.04.01,Diabetes Type II
+PID1082,bOb JOHNSON,male,,160,eighty,,,nO,,,Diabetes Type II
+PID1020,jane JOHNSON,F,50,one seventy,60,,,N,NO,2023.04.01,
+PID1060,ALICE,FEMALE,50,160,85,,,YES,,March 5 2023,none
+PID1071,jane Smith,f,35,180,85,,,,Occasionally,15-02-2023,Diabetes Type II
+PID1014,mary,M,35,180,70,,110 over 70,nO,Yes,,Diabetes Type II
+PID1092,bOb ,,,165,80,,,YES,Yes,,
+PID1051,mary Smith,f,35,,90,,120/80,N,Yes,March 5 2023,
+PID1070,Johndoe,male,50,180,70,,130-85,YES,Yes,,Diabetes Type II

@@ -1,0 +1,101 @@
+patientid,name,gender,age,height(cm),weight(kg),bmi,bloodpressure,diabetes,smoker,dateofvisit,diagnosis,height(m),yearofvisit
+PID1030,Marydoe,Female,50,160,60,23.4,128/78,Yes,No,2023-01-15,none,1.6,2023
+PID1065,Jane,Male,45,170,80,27.7,128/78,Yes,No,2023-01-15,Hypertension,1.7,2023
+PID1064,Alice Johnson,Female,65,170,60,20.8,128/78,Yes,No,2023-04-01,Diabetes Type II,1.7,2023
+PID1053,Alice Johnson,Male,45,170,90,31.1,128/78,Yes,No,2023-02-15,Hypertension,1.7,2023
+PID1045,John ,Male,25,160,70,27.3,140/90,No,No,2023-04-01,Hypertension,1.6,2023
+PID1094,Alice,Male,30,165,60,22.0,140/90,No,No,2023-01-15,none,1.65,2023
+PID1044,Micheal,Female,25,170,60,20.8,128/78,Yes,Yes,2023-04-01,Hypertension,1.7,2023
+PID1047,Jane Smith,Female,50,170,60,20.8,140/90,No,No,2023-04-01,Hypertension,1.7,2023
+PID1010,Johndoe,Male,25,170,60,20.8,110/70,Yes,Yes,2023-02-15,Hypertension,1.7,2023
+PID1000,Jane ,Female,30,170,60,20.8,120/80,Yes,No,2023-01-15,Hypertension,1.7,2023
+PID1018,Alice ,Female,30,165,80,29.4,140/90,Yes,No,2023-04-01,Diabetes Type II,1.65,2023
+PID1031,Mary,Female,40,175,80,26.1,120/80,Yes,Yes,2023-02-15,Asthma,1.75,2023
+PID1089,John,Male,65,175,70,22.9,110/70,No,occasionally,2023-01-15,Hypertension,1.75,2023
+PID1096,Bob Johnson,Male,65,180,70,21.6,130/85,Yes,No,2023-02-15,Hypertension,1.8,2023
+PID1077,Alice Smith,Male,65,170,80,27.7,130/85,No,No,2023-02-15,Asthma,1.7,2023
+PID1004,Micheal,Male,40,170,70,24.2,128/78,Yes,occasionally,2023-03-05,Asthma,1.7,2023
+PID1080,Mary Johnson,Male,55,170,70,24.2,110/70,No,No,2023-01-15,Hypertension,1.7,2023
+PID1033,John ,Male,55,175,60,19.6,128/78,Yes,No,2023-03-05,Hypertension,1.75,2023
+PID1012,Bob ,Male,45,165,60,22.0,128/78,Yes,occasionally,2023-02-15,Hypertension,1.65,2023
+PID1026,Alice ,Female,35,175,60,19.6,140/90,Yes,No,2023-01-15,Hypertension,1.75,2023
+PID1099,Alicedoe,Male,50,170,85,29.4,140/90,No,occasionally,2023-03-05,none,1.7,2023
+PID1055,Bob ,Female,35,160,85,33.2,110/70,Yes,No,2023-01-15,Hypertension,1.6,2023
+PID1022,Jane,Male,65,170,60,20.8,140/90,Yes,No,2023-04-01,Hypertension,1.7,2023
+PID1076,Micheal ,Female,50,170,70,24.2,128/78,No,occasionally,2023-01-15,none,1.7,2023
+PID1072,Bob ,Male,50,180,90,27.8,140/90,No,occasionally,2023-03-05,Hypertension,1.8,2023
+PID1015,John ,Male,55,160,80,31.2,120/80,Yes,No,2023-01-15,Hypertension,1.6,2023
+PID1042,Jane Johnson,Female,65,160,60,23.4,140/90,Yes,No,2023-01-15,Hypertension,1.6,2023
+PID1040,Micheal,Male,65,160,70,27.3,120/80,Yes,No,2023-01-15,none,1.6,2023
+PID1009,John ,Male,25,170,85,29.4,120/80,Yes,No,2023-01-15,none,1.7,2023
+PID1085,Mary ,Male,50,160,80,31.2,140/90,No,No,2023-01-15,Hypertension,1.6,2023
+PID1011,Alice,Male,50,170,85,29.4,128/78,Yes,No,2023-03-05,Hypertension,1.7,2023
+PID1078,Bobdoe,Female,25,170,60,20.8,120/80,No,Yes,2023-01-15,Diabetes Type II,1.7,2023
+PID1028,Bob,Male,65,170,70,24.2,128/78,No,No,2023-01-15,Hypertension,1.7,2023
+PID1079,Micheal,Male,45,180,80,24.7,120/80,Yes,No,2023-01-15,Diabetes Type II,1.8,2023
+PID1005,Mary,Male,55,160,60,23.4,130/85,Yes,No,2023-03-05,none,1.6,2023
+PID1062,Alice,Female,30,165,60,22.0,130/85,Yes,No,2023-03-05,Hypertension,1.65,2023
+PID1056,Bob Smith,Female,25,170,90,31.1,110/70,Yes,No,2023-02-15,Asthma,1.7,2023
+PID1039,John Johnson,Female,55,170,60,20.8,128/78,No,No,2023-01-15,Diabetes Type II,1.7,2023
+PID1035,Michealdoe,Male,25,170,60,20.8,140/90,No,No,2023-01-15,Diabetes Type II,1.7,2023
+PID1016,Michealdoe,Female,35,170,85,29.4,120/80,Yes,No,2023-01-15,Hypertension,1.7,2023
+PID1066,Micheal Johnson,Male,40,175,80,26.1,120/80,Yes,No,2023-02-15,Hypertension,1.75,2023
+PID1034,Alice Smith,Female,40,170,60,20.8,120/80,Yes,No,2023-01-15,Hypertension,1.7,2023
+PID1007,Alice ,Female,30,165,80,29.4,128/78,No,Yes,2023-02-15,Diabetes Type II,1.65,2023
+PID1043,John,Female,55,170,80,27.7,110/70,No,No,2023-01-15,none,1.7,2023
+PID1068,Marydoe,Female,55,170,90,31.1,120/80,No,No,2023-04-01,Hypertension,1.7,2023
+PID1069,Bob ,Male,25,180,60,18.5,130/85,Yes,No,2023-01-15,none,1.8,2023
+PID1027,Bob Johnson,Female,55,160,80,31.2,110/70,No,No,2023-01-15,none,1.6,2023
+PID1019,Jane,Male,30,165,80,29.4,110/70,Yes,occasionally,2023-01-15,Hypertension,1.65,2023
+PID1084,Micheal Smith,Male,40,170,60,20.8,128/78,Yes,No,2023-02-15,Asthma,1.7,2023
+PID1025,Micheal Johnson,Female,55,180,60,18.5,140/90,Yes,No,2023-01-15,Hypertension,1.8,2023
+PID1073,Janedoe,Female,55,175,85,27.8,140/90,No,occasionally,2023-01-15,Hypertension,1.75,2023
+PID1049,John Johnson,Female,50,165,80,29.4,128/78,Yes,No,2023-01-15,Hypertension,1.65,2023
+PID1013,Janedoe,Male,30,170,80,27.7,128/78,No,No,2023-03-05,Asthma,1.7,2023
+PID1024,John,Female,25,180,60,18.5,128/78,No,No,2023-03-05,Hypertension,1.8,2023
+PID1003,John ,Female,25,170,85,29.4,128/78,Yes,Yes,2023-04-01,Asthma,1.7,2023
+PID1017,John,Female,30,170,85,29.4,140/90,Yes,No,2023-01-15,Asthma,1.7,2023
+PID1038,John ,Female,50,170,60,20.8,110/70,No,occasionally,2023-01-15,Hypertension,1.7,2023
+PID1008,Bob,Male,25,165,70,25.7,128/78,No,No,2023-02-15,Asthma,1.65,2023
+PID1081,Bob ,Male,40,175,60,19.6,140/90,Yes,No,2023-01-15,Diabetes Type II,1.75,2023
+PID1006,Micheal ,Male,65,170,60,20.8,110/70,Yes,No,2023-01-15,Hypertension,1.7,2023
+PID1067,Alice,Female,35,165,85,31.2,120/80,Yes,No,2023-02-15,Hypertension,1.65,2023
+PID1036,Johndoe,Female,35,170,70,24.2,128/78,Yes,occasionally,2023-04-01,Hypertension,1.7,2023
+PID1091,Janedoe,Male,35,180,60,18.5,128/78,Yes,No,2023-01-15,Hypertension,1.8,2023
+PID1083,Janedoe,Male,40,170,85,29.4,110/70,Yes,No,2023-03-05,Asthma,1.7,2023
+PID1054,John Smith,Female,55,170,80,27.7,120/80,No,No,2023-01-15,Asthma,1.7,2023
+PID1050,Bob,Male,55,170,70,24.2,128/78,Yes,No,2023-01-15,Hypertension,1.7,2023
+PID1070,Johndoe,Male,50,180,70,21.6,130/85,Yes,Yes,2023-01-15,Diabetes Type II,1.8,2023
+PID1046,Bobdoe,Male,25,170,60,20.8,140/90,Yes,No,2023-02-15,Asthma,1.7,2023
+PID1061,Bobdoe,Female,25,170,60,20.8,140/90,Yes,No,2023-04-01,Hypertension,1.7,2023
+PID1097,John Smith,Male,65,170,80,27.7,120/80,No,Yes,2023-04-01,Hypertension,1.7,2023
+PID1041,Mary ,Male,40,175,60,19.6,120/80,No,No,2023-04-01,none,1.75,2023
+PID1058,John,Male,40,170,60,20.8,110/70,Yes,Yes,2023-01-15,none,1.7,2023
+PID1048,John Smith,Male,40,180,80,24.7,130/85,No,No,2023-01-15,Hypertension,1.8,2023
+PID1090,Marydoe,Female,65,170,60,20.8,128/78,Yes,No,2023-03-05,Hypertension,1.7,2023
+PID1057,Bobdoe,Male,35,170,80,27.7,128/78,Yes,Yes,2023-03-05,Hypertension,1.7,2023
+PID1075,Jane,Female,55,170,80,27.7,110/70,Yes,No,2023-01-15,none,1.7,2023
+PID1032,Alicedoe,Female,50,170,85,29.4,140/90,Yes,Yes,2023-01-15,Hypertension,1.7,2023
+PID1098,Jane Johnson,Female,55,170,60,20.8,120/80,No,No,2023-01-15,Asthma,1.7,2023
+PID1059,Janedoe,Male,35,170,80,27.7,140/90,Yes,No,2023-01-15,Hypertension,1.7,2023
+PID1063,Jane Smith,Male,35,170,60,20.8,140/90,Yes,Yes,2023-01-15,Hypertension,1.7,2023
+PID1088,Alice,Female,50,165,60,22.0,110/70,No,No,2023-01-15,Hypertension,1.65,2023
+PID1037,Alice ,Male,30,170,80,27.7,128/78,No,No,2023-01-15,Diabetes Type II,1.7,2023
+PID1029,Bob Johnson,Female,30,170,60,20.8,120/80,No,occasionally,2023-01-15,Hypertension,1.7,2023
+PID1093,Mary Smith,Female,30,175,70,22.9,110/70,No,No,2023-01-15,Hypertension,1.75,2023
+PID1001,Bob Smith,Female,45,170,85,29.4,128/78,No,No,2023-02-15,Diabetes Type II,1.7,2023
+PID1052,Micheal Smith,Male,40,180,80,24.7,110/70,No,No,2023-04-01,Hypertension,1.8,2023
+PID1021,Micheal Johnson,Male,40,170,60,20.8,140/90,Yes,No,2023-02-15,none,1.7,2023
+PID1002,Janedoe,Female,65,180,85,26.2,128/78,No,No,2023-02-15,Hypertension,1.8,2023
+PID1023,Alice Smith,Female,50,170,80,27.7,140/90,No,No,2023-03-05,Hypertension,1.7,2023
+PID1087,Micheal,Male,25,170,60,20.8,128/78,Yes,No,2023-01-15,Asthma,1.7,2023
+PID1095,Alice ,Male,65,180,85,26.2,128/78,Yes,No,2023-01-15,Asthma,1.8,2023
+PID1074,John ,Male,65,180,70,21.6,110/70,Yes,No,2023-02-15,Hypertension,1.8,2023
+PID1086,Michealdoe,Male,45,170,85,29.4,130/85,Yes,No,2023-04-01,Diabetes Type II,1.7,2023
+PID1082,Bob Johnson,Male,30,160,80,31.2,128/78,No,No,2023-01-15,Diabetes Type II,1.6,2023
+PID1020,Jane Johnson,Female,50,170,60,20.8,128/78,No,No,2023-04-01,Hypertension,1.7,2023
+PID1060,Alice,Female,50,160,85,33.2,128/78,Yes,No,2023-03-05,none,1.6,2023
+PID1071,Jane Smith,Female,35,180,85,26.2,128/78,Yes,occasionally,2023-02-15,Diabetes Type II,1.8,2023
+PID1014,Mary,Male,35,180,70,21.6,110/70,No,Yes,2023-01-15,Diabetes Type II,1.8,2023
+PID1092,Bob ,Male,30,165,80,29.4,128/78,Yes,Yes,2023-01-15,Hypertension,1.65,2023
+PID1051,Mary Smith,Female,35,170,90,31.1,120/80,No,Yes,2023-03-05,Hypertension,1.7,2023

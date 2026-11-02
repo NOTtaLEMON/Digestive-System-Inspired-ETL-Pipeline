@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bio-mimetic Digestive System ETL Pipeline</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+  <!-- Enterprise Header Bar -->
+  <header class="app-header">
+    <div class="brand-wrapper">
+      <span class="brand-badge">BIO-ETL</span>
+      <div>
+        <h1 class="brand-title">Bio-mimetic Digestive Pipeline</h1>
+        <p class="brand-sub">Enterprise Data Metabolism & Immune Surveillance Engine</p>
+      </div>
+    </div>
+
+    <div class="header-controls">
+      <!-- Quick File Selector -->
+      <select class="header-select" id="quick-file-selector">
+        <!-- Dynamically loaded -->
+      </select>
+
+      <!-- Dedicated AI Mode Checkbox Button -->
+      <label class="btn-ai-toggle" title="Enable or disable automated AI clinical cohort synthesis">
+        <input type="checkbox" id="ctrl-ai-toggle" checked>
+        <span>AI Analysis Mode</span>
+      </label>
+
+      <!-- Configuration Settings -->
+      <button class="btn btn-secondary" id="btn-open-config">Configure Pipeline</button>
+
+      <!-- Primary Action -->
+      <button class="btn btn-primary" id="btn-start-run">Execute Pipeline</button>
+    </div>
+  </header>
+
+  <!-- Metrics KPI Strip -->
+  <section class="metrics-strip">
+    <div class="metric-card">
+      <div class="metric-label">Mouth (Boluses)</div>
+      <div class="metric-val" id="kpi-mouth">0 / 0</div>
+    </div>
+
+    <div class="metric-card">
+      <div class="metric-label">Acidified (Chars)</div>
+      <div class="metric-val" id="kpi-stomach">0</div>
+    </div>
+
+    <div class="metric-card">
+      <div class="metric-label">Detoxified (Fields)</div>
+      <div class="metric-val" id="kpi-liver">0</div>
+    </div>
+
+    <div class="metric-card">
+      <div class="metric-label">Threats Neutralized</div>
+      <div class="metric-val" id="kpi-threats" style="color: var(--color-danger);">0</div>
+    </div>
+
+    <div class="metric-card">
+      <div class="metric-label">Quarantined Records</div>
+      <div class="metric-val" id="kpi-quarantine" style="color: var(--color-warning);">0</div>
+    </div>
+
+    <div class="metric-card">
+      <div class="metric-label">Absorbed Records</div>
+      <div class="metric-val" id="kpi-absorbed" style="color: var(--color-success);">0</div>
+    </div>
+
+    <div class="metric-card">
+      <div class="metric-label">Excreted Waste</div>
+      <div class="metric-val" id="kpi-excreted" style="color: var(--color-purple);">0</div>
+    </div>
+  </section>
+
+  <!-- Main Dashboard Layout -->
+  <main class="dashboard-grid">
+    
+    <!-- Left Column: Anatomical Visual Pipeline -->
+    <div class="panel">
+      <div class="panel-title-bar">
+        <h2 class="panel-title">Gastrointestinal Tract Simulation</h2>
+        <span id="current-organ-badge" class="status-tag">Status: Standby</span>
+      </div>
+
+      <div class="anatomy-stage-container">
+        <!-- SVG Canvas (Light Enterprise Palette) -->
+        <svg id="digestive-canvas-svg" viewBox="0 0 540 680" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="grad-stomach" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#ecfdf5"/>
+              <stop offset="100%" stop-color="#a7f3d0"/>
+            </linearGradient>
+
+            <linearGradient id="grad-liver" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#fef3c7"/>
+              <stop offset="100%" stop-color="#fde68a"/>
+            </linearGradient>
+
+            <linearGradient id="grad-intestine" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#fce7f3"/>
+              <stop offset="100%" stop-color="#fbcfe8"/>
+            </linearGradient>
+
+            <linearGradient id="grad-colon" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#f3e8ff"/>
+              <stop offset="100%" stop-color="#e9d5ff"/>
+            </linearGradient>
+          </defs>
+
+          <!-- Background subtle grid -->
+          <pattern id="light-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+            <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#f1f5f9" stroke-width="1"/>
+          </pattern>
+          <rect width="100%" height="100%" fill="url(#light-grid)"/>
+
+          <!-- 1. MOUTH (Mastication) -->
+          <g id="organ-mouth" class="organ-node">
+            <path d="M 210 40 C 240 25, 300 25, 330 40 C 345 60, 330 85, 270 90 C 210 85, 195 60, 210 40 Z" 
+                  fill="#ffe4e6" stroke="#f43f5e" stroke-width="2"/>
+            <!-- Teeth Top -->
+            <path d="M 225 45 L 235 52 L 245 45 L 255 52 L 265 45 L 275 52 L 285 45 L 295 52 L 305 45 L 315 52" 
+                  stroke="#ffffff" stroke-width="3" stroke-linecap="round" fill="none"/>
+            <!-- Teeth Bottom -->
+            <path d="M 230 80 L 240 73 L 250 80 L 260 73 L 270 80 L 280 73 L 290 80 L 300 73 L 310 80" 
+                  stroke="#ffffff" stroke-width="3" stroke-linecap="round" fill="none"/>
+            <text x="270" y="24" fill="#9f1239" font-size="11" font-weight="700" text-anchor="middle" font-family="-apple-system, sans-serif">1. MOUTH (Mastication)</text>
+          </g>
+
+          <!-- ESOPHAGUS -->
+          <g id="organ-esophagus">
+            <path d="M 270 90 Q 265 130 260 170" stroke="#fecdd3" stroke-width="14" stroke-linecap="round" fill="none"/>
+            <path d="M 270 90 Q 265 130 260 170" stroke="#f43f5e" stroke-width="4" stroke-dasharray="6 4" fill="none"/>
+          </g>
+
+          <!-- 2. STOMACH -->
+          <g id="organ-stomach" class="organ-node">
+            <path d="M 260 170 C 230 170, 190 200, 190 240 C 190 285, 250 300, 290 290 C 320 280, 315 235, 285 220 C 275 210, 275 185, 260 170 Z" 
+                  fill="url(#grad-stomach)" stroke="#059669" stroke-width="2"/>
+            <!-- Acid Dissolution Bubbles -->
+            <circle cx="230" cy="245" r="4" fill="#059669" class="bubble-particle"/>
+            <circle cx="260" cy="260" r="5" fill="#10b981" class="bubble-particle" style="animation-delay: 0.6s;"/>
+            <circle cx="215" cy="265" r="3" fill="#34d399" class="bubble-particle" style="animation-delay: 1.2s;"/>
+            <text x="230" y="235" fill="#065f46" font-size="11" font-weight="700" text-anchor="middle" font-family="-apple-system, sans-serif">2. STOMACH</text>
+            <text x="230" y="250" fill="#047857" font-size="9" text-anchor="middle">Acid Dissolution (pH 1.5)</text>
+          </g>
+
+          <!-- 3. LIVER & GALLBLADDER -->
+          <g id="organ-liver" class="organ-node">
+            <path d="M 310 160 C 370 150, 430 180, 420 230 C 410 265, 350 270, 310 260 C 300 240, 305 180, 310 160 Z" 
+                  fill="url(#grad-liver)" stroke="#d97706" stroke-width="2"/>
+            <!-- Gallbladder & Duct -->
+            <path d="M 335 250 C 330 265, 350 275, 355 260 Z" fill="#65a30d" stroke="#4d7c0f" stroke-width="1.5"/>
+            <path d="M 345 265 Q 325 285 295 295" stroke="#65a30d" stroke-width="3" stroke-dasharray="4 2" fill="none"/>
+            <text x="365" y="205" fill="#92400e" font-size="11" font-weight="700" text-anchor="middle" font-family="-apple-system, sans-serif">3. LIVER</text>
+            <text x="365" y="220" fill="#b45309" font-size="9" text-anchor="middle">Bile Detox & Types</text>
+          </g>
+
+          <!-- 4. IMMUNE SYSTEM SURVEILLANCE BARRIER -->
+          <g id="organ-immune" class="organ-node">
+            <rect x="135" y="305" width="270" height="52" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="5 3"/>
+            <!-- White Blood Cell / Macrophage -->
+            <circle cx="170" cy="331" r="16" fill="#ffffff" stroke="#dc2626" stroke-width="1.5"/>
+            <path d="M 170 322 L 170 340 M 161 331 L 179 331" stroke="#dc2626" stroke-width="2"/>
+            <text x="275" y="328" fill="#991b1b" font-size="11" font-weight="700" text-anchor="middle" font-family="-apple-system, sans-serif">4. IMMUNE SURVEILLANCE</text>
+            <text x="275" y="343" fill="#b91c1c" font-size="9" text-anchor="middle">WBC Threat Scan & Quarantine Facility</text>
+          </g>
+
+          <!-- 5. SMALL INTESTINE & VILLI -->
+          <g id="organ-small-intestine" class="organ-node">
+            <path d="M 270 360 Q 230 380 270 400 Q 310 420 270 440 Q 220 460 270 480 Q 320 500 270 515" 
+                  fill="none" stroke="url(#grad-intestine)" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M 270 360 Q 230 380 270 400 Q 310 420 270 440 Q 220 460 270 480 Q 320 500 270 515" 
+                  fill="none" stroke="#db2777" stroke-width="4" stroke-dasharray="4 4" class="pulse-villi"/>
+            <text x="270" y="445" fill="#831843" font-size="11" font-weight="700" text-anchor="middle" font-family="-apple-system, sans-serif">5. SMALL INTESTINE</text>
+            <text x="270" y="460" fill="#9d174d" font-size="9" text-anchor="middle">Microvilli Nutrient Absorption</text>
+          </g>
+
+          <!-- 6. LARGE INTESTINE (COLON) -->
+          <g id="organ-large-intestine" class="organ-node">
+            <path d="M 180 505 L 170 410 L 170 380 Q 170 360 210 360 L 330 360 Q 370 360 370 380 L 370 490 L 310 540 L 270 600" 
+                  fill="none" stroke="url(#grad-colon)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+            <text x="390" y="440" fill="#581c87" font-size="10" font-weight="700" text-anchor="start" font-family="-apple-system, sans-serif">6. COLON</text>
+            <text x="390" y="454" fill="#6b21a8" font-size="8" text-anchor="start">Waste Ejection</text>
+          </g>
+
+          <!-- 7. BLOODSTREAM TO METABOLISM STORAGE -->
+          <g id="organ-bloodstream">
+            <path d="M 270 480 C 130 500, 70 540, 70 610" fill="none" stroke="#ef4444" stroke-width="6" stroke-linecap="round"/>
+            <!-- Capillary destination vault -->
+            <rect x="25" y="620" width="90" height="42" rx="4" fill="#ffffff" stroke="#0284c7" stroke-width="1.5"/>
+            <text x="70" y="638" fill="#0369a1" font-size="9" font-weight="700" text-anchor="middle" font-family="-apple-system, sans-serif">METABOLISM</text>
+            <text x="70" y="652" fill="#0284c7" font-size="8" text-anchor="middle">Absorbed CSV / JSON</text>
+          </g>
+
+          <!-- EXCRETION RECTUM VAULT -->
+          <g id="organ-rectum">
+            <rect x="225" y="615" width="90" height="38" rx="4" fill="#ffffff" stroke="#7c3aed" stroke-width="1.5"/>
+            <text x="270" y="632" fill="#6d28d9" font-size="9" font-weight="700" text-anchor="middle" font-family="-apple-system, sans-serif">EJECTION</text>
+            <text x="270" y="645" fill="#7c3aed" font-size="8" text-anchor="middle">Waste Manifest Log</text>
+          </g>
+
+          <!-- DYNAMIC BOLUSES CONTAINER -->
+          <g id="boluses-container"></g>
+        </svg>
+      </div>
+
+      <!-- Playback Control Strip -->
+      <div class="playback-bar">
+        <div style="display: flex; gap: 0.5rem; align-items: center;">
+          <button class="btn btn-sm btn-secondary" id="btn-pause-play">Pause</button>
+          <button class="btn btn-sm btn-secondary" id="btn-step-forward">Step</button>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.4rem;">
+          <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 600;">SPEED:</span>
+          <div class="speed-buttons">
+            <button class="speed-btn" data-speed="0.5">0.5x</button>
+            <button class="speed-btn active" data-speed="1.0">1x</button>
+            <button class="speed-btn" data-speed="2.0">2x</button>
+            <button class="speed-btn" data-speed="5.0">5x</button>
+            <button class="speed-btn" data-speed="20.0">Fast</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: Corporate Activity & Analytics Panels -->
+    <div class="panel">
+      <!-- Tabs -->
+      <div class="tab-headers">
+        <button class="tab-btn active" data-tab="tab-feed">Execution Logs</button>
+        <button class="tab-btn" data-tab="tab-immune">
+          Immune & Quarantine <span id="badge-tab-quarantine" class="tab-badge" style="display:none;">0</span>
+        </button>
+        <button class="tab-btn" data-tab="tab-analytics">Health Analytics</button>
+        <button class="tab-btn" data-tab="tab-waste">Waste Manifest</button>
+      </div>
+
+      <!-- Tab 1: Live Biological Activity Log Feed -->
+      <div class="tab-content active" id="tab-feed">
+        <div class="log-stream" id="activity-log-stream">
+          <div class="log-entry stage-mouth">
+            <div class="log-meta">
+              <span class="log-organ-badge" style="color: var(--organ-mouth);">MOUTH</span>
+              <span>STANDBY</span>
+            </div>
+            <div class="log-action">System Initialized</div>
+            <div class="log-reason">Select a dataset and click 'Execute Pipeline' to begin ingestion and digestion.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 2: Immune Surveillance & Quarantine Tribunal -->
+      <div class="tab-content" id="tab-immune">
+        <!-- Neutralized Threats Section -->
+        <div style="margin-bottom: 1.15rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.45rem;">
+            <h3 style="font-size: 0.88rem; font-weight: 700; color: var(--color-danger);">
+              Neutralized Security Payloads
+            </h3>
+            <span style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono);" id="threats-counter-label">0 detected</span>
+          </div>
+          <div id="threat-list">
+            <p style="font-size: 0.8rem; color: var(--text-muted);">No security payloads detected.</p>
+          </div>
+        </div>
+
+        <!-- Quarantined Records Section -->
+        <div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+            <h3 style="font-size: 0.88rem; font-weight: 700; color: var(--color-warning);">
+              Quarantined Records (<span id="quarantine-count-text">0</span> pending)
+            </h3>
+            <button class="btn btn-sm btn-success" id="btn-approve-all-quarantine" style="display: none;">
+              Approve All with Imputation
+            </button>
+          </div>
+          <div class="quarantine-list" id="quarantine-records-list">
+            <p style="font-size: 0.8rem; color: var(--text-muted);">No records currently detained in quarantine.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 3: Small Intestine Absorption & Cohort Health Analytics -->
+      <div class="tab-content" id="tab-analytics">
+        <div class="analytics-kpi-grid">
+          <div class="analytics-card">
+            <div class="analytics-val" id="res-avg-age">--</div>
+            <div class="analytics-title">Average Age</div>
+          </div>
+          <div class="analytics-card">
+            <div class="analytics-val" id="res-avg-bmi">--</div>
+            <div class="analytics-title">Average BMI</div>
+          </div>
+          <div class="analytics-card">
+            <div class="analytics-val" id="res-chronic-pct">--%</div>
+            <div class="analytics-title">Chronic Disease</div>
+          </div>
+          <div class="analytics-card">
+            <div class="analytics-val" id="res-smoker-pct">--%</div>
+            <div class="analytics-title">Smoker Pct</div>
+          </div>
+        </div>
+
+        <!-- Weight Class Stratification -->
+        <div style="margin-bottom: 1rem;">
+          <h4 style="font-size: 0.8rem; font-weight: 700; color: var(--text-secondary); text-transform: uppercase; margin-bottom: 0.4rem;">
+            BMI Weight Class Stratification
+          </h4>
+          <div id="bmi-distribution-bars"></div>
+        </div>
+
+        <!-- Action / Export Buttons -->
+        <div style="display: flex; gap: 0.65rem; margin-top: 0.5rem; margin-bottom: 0.85rem;">
+          <button class="btn btn-sm btn-success" id="btn-download-csv" disabled>Export Clean CSV</button>
+          <button class="btn btn-sm btn-primary" id="btn-download-json" disabled>Export Clean JSON</button>
+        </div>
+
+        <!-- AI Clinical Insights Panel -->
+        <div class="ai-insights-box" id="ai-insights-container" style="display: none;">
+          <div class="ai-header">
+            <span>AI Population Health Insights</span>
+            <span style="font-size: 0.7rem; color: var(--color-primary); font-family: var(--font-mono);">ACTIVE</span>
+          </div>
+          <p id="ai-summary-text" style="font-size: 0.82rem; line-height: 1.45; color: var(--text-secondary); margin-bottom: 0.65rem;"></p>
+          <div id="ai-recommendations-list"></div>
+        </div>
+      </div>
+
+      <!-- Tab 4: Large Intestine Waste Manifest -->
+      <div class="tab-content" id="tab-waste">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+          <h3 style="font-size: 0.88rem; font-weight: 700; color: var(--color-purple);">
+            Colon Ejection Manifest
+          </h3>
+          <button class="btn btn-sm btn-secondary" id="btn-download-waste" disabled>
+            Export Waste Manifest (CSV)
+          </button>
+        </div>
+        <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.75rem;">
+          Neutralized security injection payloads and records rejected during quarantine tribunal are logged below.
+        </p>
+        <div id="waste-list" style="display: flex; flex-direction: column; overflow-y: auto;">
+          <p style="font-size: 0.8rem; color: var(--text-muted);">Colon is currently clear.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Configuration Modal -->
+  <div class="modal-overlay" id="config-modal">
+    <div class="modal-dialog">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+        <h2 class="modal-title">Pipeline Configuration</h2>
+        <button class="btn btn-sm btn-secondary" id="btn-close-config">Close</button>
+      </div>
+
+      <!-- File Source -->
+      <div class="form-group">
+        <label class="form-label">Data Ingestion Source</label>
+        <select class="form-select" id="cfg-file-source">
+          <option value="server_file">Select from Workspace Repository</option>
+          <option value="upload">Upload Custom CSV File</option>
+        </select>
+      </div>
+
+      <div class="form-group" id="group-server-file">
+        <label class="form-label">Workspace Dataset:</label>
+        <select class="form-select" id="cfg-server-filename">
+          <!-- Populated from server -->
+        </select>
+      </div>
+
+      <div class="form-group" id="group-upload-file" style="display: none;">
+        <label class="form-label">Upload CSV:</label>
+        <input type="file" class="form-input" id="cfg-file-upload" accept=".csv">
+      </div>
+
+      <!-- Standard Blood Pressure Format -->
+      <div class="form-group">
+        <label class="form-label">Target Blood Pressure Format</label>
+        <select class="form-select" id="cfg-bp-format">
+          <option value="slash">Systolic/Diastolic (e.g. 120/80)</option>
+          <option value="over">Systolic over Diastolic (e.g. 120 over 80)</option>
+          <option value="dash">Systolic-Diastolic (e.g. 130-85)</option>
+          <option value="by">Systolic by Diastolic (e.g. 90 by 70)</option>
+        </select>
+      </div>
+
+      <!-- Standard Date Format -->
+      <div class="form-group">
+        <label class="form-label">Target Date Format</label>
+        <select class="form-select" id="cfg-date-format">
+          <option value="YYYY-MM-DD">ISO Standard (YYYY-MM-DD)</option>
+          <option value="DD-MM-YYYY">European Standard (DD-MM-YYYY)</option>
+          <option value="MM/DD/YYYY">US Standard (MM/DD/YYYY)</option>
+          <option value="YYYY.MM.DD">Dot Separated (YYYY.MM.DD)</option>
+        </select>
+      </div>
+
+      <!-- Chunk Mastication Size -->
+      <div class="form-group">
+        <label class="form-label">Mastication Bolus Strategy</label>
+        <select class="form-select" id="cfg-chunk-mode">
+          <option value="auto">Adaptive Bolus (1 bolus per KB of incoming file size)</option>
+          <option value="manual">Manual Bolus Window Size</option>
+        </select>
+        <div id="cfg-manual-chunk-wrapper" style="display: none; margin-top: 0.4rem;">
+          <input type="number" class="form-input" id="cfg-manual-chunk-val" min="5" max="500" value="25">
+        </div>
+      </div>
+
+      <!-- Column Priorities Matrix -->
+      <div class="form-group">
+        <label class="form-label">Column Priority Enforcement (High Priority = Missing/corrupt triggers Quarantine)</label>
+        <table class="priority-table">
+          <thead>
+            <tr>
+              <th>Column Name</th>
+              <th>Priority Level</th>
+            </tr>
+          </thead>
+          <tbody id="priority-matrix-rows">
+            <!-- Dynamically populated -->
+          </tbody>
+        </table>
+      </div>
+
+      <div style="display: flex; justify-content: flex-end; gap: 0.5rem; margin-top: 1.25rem;">
+        <button class="btn btn-secondary" id="btn-cancel-config">Cancel</button>
+        <button class="btn btn-primary" id="btn-save-config">Save Settings</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dedicated Confirmation Pop-up: Squash this record?? -->
+  <div class="modal-overlay" id="quarantine-confirm-modal">
+    <div class="modal-dialog" style="max-width: 480px;">
+      <div style="border-bottom: 1px solid var(--border-color); padding-bottom: 0.65rem; margin-bottom: 1rem;">
+        <span style="font-size: 0.72rem; font-weight: 700; color: var(--color-warning); text-transform: uppercase;">
+          Immune System Quarantine Tribunal
+        </span>
+        <h2 class="modal-title" style="margin-top: 0.2rem; font-size: 1.2rem;">
+          Squash this record??
+        </h2>
+      </div>
+
+      <div style="background: var(--bg-surface-secondary); border: 1px solid var(--border-color); border-radius: 6px; padding: 0.85rem; margin-bottom: 1.15rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+          <span style="font-weight: 700; font-family: var(--font-mono); font-size: 0.95rem;" id="modal-q-pid">PID1000</span>
+          <span style="font-size: 0.72rem; color: var(--color-danger); font-weight: 700; background: #fee2e2; padding: 0.15rem 0.4rem; border-radius: 3px;" id="modal-q-priority">HIGH PRIORITY VIOLATION</span>
+        </div>
+        <div style="font-size: 0.82rem; color: #92400e; background: #fffbeb; border: 1px solid #fde68a; padding: 0.45rem 0.6rem; border-radius: 4px; margin-bottom: 0.5rem;" id="modal-q-reason">
+          Missing high-priority field
+        </div>
+        <div style="font-size: 0.74rem; font-family: var(--font-mono); color: var(--text-muted); background: #ffffff; border: 1px solid var(--border-color); padding: 0.45rem; border-radius: 4px; word-break: break-all;" id="modal-q-raw">
+          Raw record data
+        </div>
+      </div>
+
+      <div style="display: flex; justify-content: flex-end; gap: 0.5rem;">
+        <button class="btn btn-secondary" id="btn-modal-q-later">Review Later</button>
+        <button class="btn btn-success" id="btn-modal-q-approve">Approve with Imputation</button>
+        <button class="btn btn-danger" id="btn-modal-q-squash">Squash This Record</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
